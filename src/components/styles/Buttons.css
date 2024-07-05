@@ -1,0 +1,78 @@
+.show-btn {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 800px) {
+  .show-btn {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.equal {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.btn:last-child {
+  font-weight: bold;
+  font-size: 35px;
+  width: 120px;
+  height: 60px;
+  border-radius: 12px;
+  color: white;
+  background-color: #ffb74d;
+}
+
+.clr {
+  color: #e57373;
+}
+
+.exp {
+  color: #64b5f6;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  margin: 8px auto;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #ffcc80;
+  border: 0px;
+  user-select: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  .btn:hover {
+    background-color: #ffb74d;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:active,
+  .btn.touched {
+    background-color: #ffa726;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:active {
+    transform: scale(0.95);
+  }
+
+  .btn.touched {
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .btn:active {
+    transform: scale(0.95);
+  }
+}
